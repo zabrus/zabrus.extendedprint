@@ -1,0 +1,1 @@
+<div class="block">	{assign var=section value='global'}	{assign var=print_settings value=$global_print_settings}	{include file="devblocks:zabrus.extendedprint::print_config_form.tpl"}		{$section='personal'}	{$print_settings = $personal_print_settings}	{include file="devblocks:zabrus.extendedprint::print_config_form.tpl"}	</div>

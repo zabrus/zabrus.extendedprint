@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header datatype="winres" segtype="sentence" adminlang="en-us"		srclang="en-us" o-tmf="abc" />
+	<body>
+		<tu tuid='extendedprint.ui.cfg.personalsettings'>			<tuv xml:lang="en_US"><seg>My personal settings for printing</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Saját nyomtatási beállításaim</seg></tuv>		</tu>			<tu tuid='extendedprint.ui.cfg.globalsettings'>			<tuv xml:lang="en_US"><seg>Global printing settings (common for everyone)</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Mindenki számára elérhető közös nyomtatási beállítások</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.scope'>			<tuv xml:lang="en_US"><seg>Scope of settings</seg></tuv>			<tuv xml:lang="hu_HU"><seg>A beállítások hatóköre</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.useprivatesettings'>			<tuv xml:lang="en_US"><seg>I'd like to print with my own settings</seg></tuv>			<tuv xml:lang="hu_HU"><seg>A saját beállításaimmat szeretnék nyomtatni</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.button'>			<tuv xml:lang="en_US"><seg>Print All</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Bővített nyomtatás</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.extendedprintcfg'>			<tuv xml:lang="en_US"><seg>Configure Extended Print</seg></tuv>			<tuv xml:lang="hu_HU"><seg>A bővített nyomtatás beállításai</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.extendedprintcfgshort'>			<tuv xml:lang="en_US"><seg>Print Config</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Nyomtatás beáll.</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.displayoptions'>			<tuv xml:lang="en_US"><seg>Display Options</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Megjelenítési beállítások</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.hidemessages'>			<tuv xml:lang="en_US"><seg>Hide all messages (show only fields and basic ticket data)</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Üzenetek elrejtése (csak a mezők és hibajegy alapvető adatai jelenjenek meg)</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.showquotes'>			<tuv xml:lang="en_US"><seg>Do not hide quotes in messages</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Ne legyenek elrejtve az idézetek az üzenetekben</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.printingoptions'>			<tuv xml:lang="en_US"><seg>Printing Options</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Nyomtatási beállítások</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.openprintdialog'>			<tuv xml:lang="en_US"><seg>Automatically Open Print Dialog</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Automatikusan jelenjen meg a nyomtatási párbeszédablak</seg></tuv>		</tu>		<tu tuid='extendedprint.ui.cfg.customstyles'>			<tuv xml:lang="en_US"><seg>Use custom styles</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Egyedi stíluslap használata</seg></tuv>		</tu>
+		<tu tuid='extendedprint.ui.cfg.customstylesheet'>			<tuv xml:lang="en_US"><seg>Custom stylesheet (copy and paste CSS styles here)</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Egyéni stíluslap (másolja ide a CSS stíluslapot)</seg></tuv>		</tu>		<tu tuid='extendedprint.ui.uknowncontexttype'>			<tuv xml:lang="en_US"><seg>Unknown context type</seg></tuv>			<tuv xml:lang="hu_HU"><seg>Ismeretlen csatolt objektum</seg></tuv>		</tu>		<!-- ACL strings -->				<tu tuid='acl.zabrus.extendedprint.enabled'>			<tuv xml:lang="en_US"><seg>[Extended Print] Can use the extended print feature</seg></tuv>			<tuv xml:lang="hu_HU"><seg>[Bővített nyomtatás] Használhatja a bővytett nyomtatási funkciókat</seg></tuv>		</tu>
+		<tu tuid='acl.zabrus.extendedprint.personalsettings'>			<tuv xml:lang="en_US"><seg>[Extended Print] Can use personal print settings</seg></tuv>			<tuv xml:lang="hu_HU"><seg>[Bővített nyomtatás] Használhat saját nyomtatási beállításokat</seg></tuv>		</tu>			</body>
+</tmx>
