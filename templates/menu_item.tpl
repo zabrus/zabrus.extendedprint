@@ -1,0 +1,1 @@
+<a href="{devblocks_url}c=config&a=extendedprint{/devblocks_url}">{'extendedprint.common'|devblocks_translate}</a>

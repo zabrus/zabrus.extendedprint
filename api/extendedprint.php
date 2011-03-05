@@ -1,12 +1,7 @@
 <?php
-
 class ZabrusExtendedPrintController extends DevblocksControllerExtension {
 	const ID = 'zabrus.controller.extendedprint';
 	
-	function __construct($manifest) {
-		parent::__construct($manifest);
-	}
-
 	/*
 	 * Request Overload
 	 */
@@ -52,7 +47,7 @@ class ZabrusExtendedPrintController extends DevblocksControllerExtension {
 
 		// Get the custom fields and their values for this ticket
 		$custom_fields = DAO_CustomField::getByContext(CerberusContexts::CONTEXT_TICKET);
-		$custom_field_values = DAO_CustomFieldValue::getValuesByContextIds(CerberusContexts::CONTEXT_TICKET, $ticket->id);
+		$tpl->assign('custom_fields', $custom_fields);
 		
 		// DEBUG:
 		// print_r($custom_fields );
@@ -60,13 +55,16 @@ class ZabrusExtendedPrintController extends DevblocksControllerExtension {
 		// print_r($custom_field_values );
 		// echo '<hr>';
 		
-		$address = DAO_Address::getWhere ('id = ' . $ticket->first_wrote_address_id);
+		$address = DAO_Address::getWhere(sprintf("id = %d", $ticket->first_wrote_address_id));
+		
 		$org_id = $address[$ticket->first_wrote_address_id]->contact_org_id;
-		$org = DAO_ContactOrg::getWhere('id = ' . $org_id);
-		$tpl->assign('org', $org[$org_id]);
-		$tpl->assign('custom_field_values', $custom_field_values[$ticket->id]);
-		$tpl->assign('custom_fields', $custom_fields);
+		if(null != ($org = DAO_ContactOrg::getWhere(sprintf("id = %d", $org_id))))
+			$tpl->assign('org', $org[$org_id]);
 
+		$custom_field_values = DAO_CustomFieldValue::getValuesByContextIds(CerberusContexts::CONTEXT_TICKET, $ticket->id);
+		if(isset($custom_field_values[$ticket->id]))
+			$tpl->assign('custom_field_values', $custom_field_values[$ticket->id]);
+			
 		// Calculate a ticket lifetime estimate (not accurate, as it does not reflect status changes, re-opens etc.)
 		// ... it's more like a conversation time span 
 		$day = 60*60*24;
