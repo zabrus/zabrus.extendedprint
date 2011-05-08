@@ -1,5 +1,6 @@
-<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
-<plugin>	<id>zabrus.extendedprint</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.devblocks.com/schema/plugin.xsd">
+	<id>zabrus.extendedprint</id>
 	<name>[zabrus] Extended Print Functionality</name>
 	<description>Provides mode detailed print output with organization, custom ticket fields, links and more.</description>	<author>zabrus.com</author>	<revision>0</revision>	<link>http://zabrus.com</link>	<image>zabrus.gif</image>	<!-- Plugin Dependencies -->
 	<dependencies>		<require plugin_id="cerberusweb.core" version="5.3.0-dev" />	</dependencies>

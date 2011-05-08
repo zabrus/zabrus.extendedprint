@@ -140,9 +140,9 @@ class ZabrusExtendedPrintController extends DevblocksControllerExtension {
 			return;
 		}
 		
-		// Owners
-		$context_workers = CerberusContexts::getWorkers(CerberusContexts::CONTEXT_TICKET, $ticket->id);
-		$tpl->assign('context_workers', $context_workers);
+		// Watchers
+		$context_watchers = CerberusContexts::getWatchers(CerberusContexts::CONTEXT_TICKET, $ticket->id);
+		$tpl->assign('context_watchers', $context_watchers);
 
 		$tpl->assign('ticket', $ticket);
 		
