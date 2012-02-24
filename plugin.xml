@@ -2,14 +2,102 @@
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.devblocks.com/schema/plugin.xsd">
 	<id>zabrus.extendedprint</id>
 	<name>[zabrus] Extended Print Functionality</name>
-	<description>Provides mode detailed print output with organization, custom ticket fields, links and more.</description>	<author>zabrus.com</author>	<revision>0</revision>	<link>http://zabrus.com</link>	<image>zabrus.gif</image>	<!-- Plugin Dependencies -->
-	<dependencies>		<require plugin_id="cerberusweb.core" version="5.3.0-dev" />	</dependencies>
-	<!-- Exported Classes -->	
-	<class_loader>		<file path="api/App.php">			<class name="ZabrusExtendedPrintSettings" />		</file>	</class_loader>
-	<acl>		<priv id="zabrus.extendedprint.enabled" label="acl.zabrus.extendedprint.enabled" />		<priv id="zabrus.extendedprint.personalsettings" label="acl.zabrus.extendedprint.personalsettings" />	</acl>
-	<extensions>		<!-- Setup Page Sections -->				<extension point="cerberusweb.ui.page.section">			<id>zabrus.extendedprint.setup.section</id>			<name>Setup Page ZabrusPrint Section</name>			<class>				<file>api/App.php</file>				<name>ZabrusPrint_SetupPageSection</name>			</class>			<params>				<param key="page_id" value="core.page.configuration" />				<param key="uri" value="extendedprint" />			</params>		</extension>				<!-- Setup Page Menu Item -->				<extension point="cerberusweb.ui.page.menu.item">			<id>zabrus.extendedprint.setup.menu.plugins</id>			<name>Setup Page Zabrus Print Menu Item</name>			<class>				<file>api/App.php</file>				<name>ZabrusPrint_SetupPluginsMenuItem</name>			</class>			<params>				<param key="page_id" value="core.page.configuration" />				<param key="menu_id" value="core.setup.menu.plugins" />			</params>		</extension>	
-		<!-- Ticket Display Toolbar -->			<extension point="cerberusweb.ticket.toolbaritem">			<id>zabrus.extendedprint.ticket.toolbaritem</id>			<name>Extended Print Ticket Toolbar Items</name>			<class>				<file>api/App.php</file>				<name>ZabrusExtendedPrintTicketToolbar</name>			</class>			<params>				<param key="uri" value="extendedprint" />			</params>		</extension>		
-		<!-- Print Controller -->	
-		<extension point="devblocks.controller">			<id>zabrus.controller.extendedprint</id>			<name>Extended Print Controller</name>			<class>				<file>api/extendedprint.php</file>				<name>ZabrusExtendedPrintController</name>			</class>			<params>				<param key="uri" value="extendedprint" />			</params>		</extension>
-	</extensions>
+	<description>Provides mode detailed print output with organization, custom ticket fields, links and more.</description>
+	<author>zabrus.com</author>
+	<version>1.0.0</version>
+	<link>http://zabrus.com</link>
+	<image>zabrus.gif</image>
+
+
+	<!-- Requirements -->
+	<requires>
+		<app_version min="5.7" max="5.7.99" />
+	</requires>
+
+
+	<!-- Plugin Dependencies -->
+
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="5.3.0-dev" />
+	</dependencies>
+
+	<!-- Exported Classes -->
+	
+	<class_loader>
+		<file path="api/App.php">
+			<class name="ZabrusExtendedPrintSettings" />
+		</file>
+	</class_loader>
+
+	<acl>
+		<priv id="zabrus.extendedprint.enabled" label="acl.zabrus.extendedprint.enabled" />
+		<priv id="zabrus.extendedprint.personalsettings" label="acl.zabrus.extendedprint.personalsettings" />
+	</acl>
+
+	<extensions>
+
+		<!-- Setup Page Sections -->
+		
+		<extension point="cerberusweb.ui.page.section">
+			<id>zabrus.extendedprint.setup.section</id>
+			<name>Setup Page ZabrusPrint Section</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ZabrusPrint_SetupPageSection</name>
+			</class>
+			<params>
+				<param key="page_id" value="core.page.configuration" />
+				<param key="uri" value="extendedprint" />
+			</params>
+		</extension>
+		
+		<!-- Setup Page Menu Item -->
+		
+		<extension point="cerberusweb.ui.page.menu.item">
+			<id>zabrus.extendedprint.setup.menu.plugins</id>
+			<name>Setup Page Zabrus Print Menu Item</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ZabrusPrint_SetupPluginsMenuItem</name>
+			</class>
+			<params>
+				<param key="page_id" value="core.page.configuration" />
+				<param key="menu_id" value="core.setup.menu.plugins" />
+			</params>
+		</extension>	
+
+		<!-- Ticket Display Toolbar -->	
+
+		<extension point="cerberusweb.ticket.toolbaritem">
+
+			<id>zabrus.extendedprint.ticket.toolbaritem</id>
+			<name>Extended Print Ticket Toolbar Items</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ZabrusExtendedPrintTicketToolbar</name>
+			</class>
+			<params>
+				<param key="uri" value="extendedprint" />
+			</params>
+
+		</extension>
+		
+		<!-- Print Controller -->	
+
+		<extension point="devblocks.controller">
+
+			<id>zabrus.controller.extendedprint</id>
+			<name>Extended Print Controller</name>
+			<class>
+				<file>api/extendedprint.php</file>
+				<name>ZabrusExtendedPrintController</name>
+			</class>
+			<params>
+				<param key="uri" value="extendedprint" />
+			</params>
+
+		</extension>
+
+	</extensions>
+
 </plugin>
