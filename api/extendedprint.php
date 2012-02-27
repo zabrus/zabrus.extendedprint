@@ -135,7 +135,7 @@ class ZabrusExtendedPrintController extends DevblocksControllerExtension {
 		$tpl->assign('message_notes', $message_notes);
 		
 		// Make sure we're allowed to view this ticket or message
-		if(!isset($active_worker_memberships[$ticket->team_id])) {
+		if(!isset($active_worker_memberships[$ticket->group_id])) {
 			echo "<H1>" . $translate->_('common.access_denied') . "</H1>";
 			return;
 		}
